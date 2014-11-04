@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[
+define(['backbone'], function (Backbone) {
+  var ${1:MyNamed}Model = Backbone.Model.extend({
+    // Properties
+
+    // Backbone
+
+    ${2:urlRoot: '${3:(remove if used with collection)}',}
+
+    initialize: function () {
+      ${4}
+    }
+
+    // Backbone Events
+
+    // Methods
+  });
+
+  return ${1}Model;
+});
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>backbone model</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>
