@@ -1,0 +1,46 @@
+<snippet>
+  <content><![CDATA[
+define(['backbone', 'mustache', 'text!./${1/^[a-zA-Z]/\l$0/}Template.html'], function (Backbone, Mustache, ${1/^[a-zA-Z]/\l$0/}Template) {
+  var ${1:MyNamed}View = Backbone.View.extend({
+    // Properties
+
+    template: Mustache.compile(${1/^[a-zA-Z]/\l$0/}Template),
+
+    // Backbone
+
+    initialize: function () {
+      ${2}
+    },
+
+    events: {
+
+    },
+
+    // Bootstrap
+
+    bootstrap: function () {
+      return this.render();
+    },
+
+    // Rendering
+
+    render: function () {
+      this.\$el.html(this.template());
+      return this;
+    }
+
+    // UI Events
+
+    // Backbone Events
+
+    // Methods
+  });
+
+  return ${1}View;
+});
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>backbone view</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.js</scope>
+</snippet>
